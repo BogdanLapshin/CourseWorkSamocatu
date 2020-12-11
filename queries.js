@@ -7,9 +7,9 @@ const pool = new Pool({
   port: 5432,
   ssl:{rejectUnauthorized:false},
 })
-const getProducts = (request, response) => {
+const getGoods = (request, response) => {
     response.header("Access-Control-Allow-Origin", "*");
-    pool.query('SELECT * FROM public.products ORDER BY id ASC', (error, results) => {
+    pool.query('SELECT * FROM public.goods ORDER BY id ASC', (error, results) => {
     if (error) {
       throw error
     }
@@ -17,10 +17,10 @@ const getProducts = (request, response) => {
   })
 }
 
-const getProductsById = (request, response) => {
+const getGoodById = (request, response) => {
   const id = parseInt(request.params.id)
     response.header("Access-Control-Allow-Origin", "*");
-    pool.query('SELECT * FROM public.products WHERE id = $1', [id], (error, results) => {
+    pool.query('SELECT * FROM public.goods WHERE id = $1', [id], (error, results) => {
     if (error) {
       throw error
     }
@@ -35,6 +35,6 @@ const getProductsById = (request, response) => {
 
 
 module.exports = {
-  getUsers,
-  getUserById  
+  getGoods,
+  getGoodById  
 }

@@ -12,8 +12,8 @@ app.use(
   })
   );
   
-app.get('/products', db.getProducts)
-app.get('/products/:id', db.getProductsById)
+app.get('/goods', db.getGoods)
+app.get('/goods/:id', db.getGoodById)
 app.use(express.static("site"));
 
 app.listen(port, () => {
