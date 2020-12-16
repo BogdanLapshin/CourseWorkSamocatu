@@ -1,5 +1,5 @@
 const container = document.querySelector("#goods_container");
-const popular = [11, 1, 6, 19];
+const popular = [1, 6, 10, 14];
 
 getDataFromDB("", function(json) {
     json.forEach((element, index) => {

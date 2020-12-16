@@ -185,6 +185,7 @@
         
         .goods {
             justify-content: center;
+            width: 100%;
         }
         
         .title4 {
@@ -311,6 +312,7 @@
         }
         
         .innerScooter {
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
