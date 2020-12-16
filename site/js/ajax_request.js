@@ -24,7 +24,7 @@ function createCard(object) {
     const good = document.createElement("div");
     good.classList.add("good");
     const href = "product.html?id=" + object.id;
-    const busket = `<div class="busket ">
+    const busket = `<div class="busket">
                         <img src="icons/new_basket.png " alt=" ">
                     </div>`
 
@@ -57,4 +57,13 @@ function createCard(object) {
     `;
 
     return good;
+}
+
+function alertBusket() {
+    const busket_alert = document.querySelectorAll(".busket");
+    for (let busket of busket_alert) {
+        busket.onclick = function() {
+            alert("Ваш товар у корзині!")
+        }
+    }
 }
