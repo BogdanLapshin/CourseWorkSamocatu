@@ -37,21 +37,23 @@ function createCard(object) {
         good.classList.add("not_stock");
     }
     good.innerHTML = `
-    <div class="imgs">
-        <img src="${object.imgs.split("&")[0]}" alt=" ">
-    </div>
-     <div class="product_name ">
-         <p>${object.name}</p>
-    </div>
-    <div class="price_busket ">
-        <div class="price ">
-            <p>${object.price} ₴</p>
+    <a class="good_a" href="product.html?id=${object.id}">
+        <div class="imgs">
+            <img src="${object.imgs.split("&")[0]}" alt=" ">
         </div>
-        ${object.stock?busket:""}
-    </div>
-    <div class="stock ">
-       ${stockDiv}
-    </div>
+        <div class="product_name ">
+            <p>${object.name}</p>
+        </div>
+        <div class="price_busket ">
+            <div class="price ">
+                <p>${object.price} ₴</p>
+            </div>
+            ${object.stock?busket:""}
+        </div>
+        <div class="stock ">
+            ${stockDiv}
+        </div>
+    </a>
     `;
 
     return good;

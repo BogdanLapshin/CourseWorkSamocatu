@@ -8,7 +8,7 @@ const if_stock = document.querySelector("#if_stock");
 const busket_button = document.querySelector("#js_button");
 
 
-const product_name = document.querySelector("#name_product");
+const product_name = document.querySelector("#nameid_product");
 const product_price = document.querySelector("#price_product");
 const slider_top_imgs = document.querySelector(".gallery-top").swiper;
 const slider_bottom_imgs = document.querySelector(".gallery-thumbs").swiper;
@@ -34,11 +34,13 @@ if (id) {
                         <div class="stock_text">
                             ${textStock}
                          </div>`;
-            busket = `<div class="buskett">
-                        <img src="icons/new_basket3.png" alt="">
-                     </div>
-                     <div class="word_buy">
-                         <p>Купити</p>
+            busket = `<div class="button_buy">
+                            <div class="buskett">
+                                 <img src="icons/new_basket3.png" alt="">
+                            </div>
+                             <div class="word_buy">
+                                <p>Купити</p>
+                             </div>
                     </div>`;
 
         } else {

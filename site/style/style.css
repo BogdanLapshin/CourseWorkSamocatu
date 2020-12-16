@@ -121,7 +121,7 @@
         }
         
         .preview {
-            padding: 50px 0 0px 0;
+            padding: 100px 0 0px 0;
             background: url('../Header/kurs-header.png') center center no-repeat;
             background-size: cover;
         }
@@ -155,7 +155,7 @@
             font-weight: 700;
             text-align: center;
             color: #fff;
-            margin-top: 120px;
+            margin-top: 90px;
             text-transform: uppercase;
         }
         
@@ -174,6 +174,7 @@
         
         .line {
             margin-bottom: 10px;
+            width: 100%;
         }
         
         .line,
@@ -413,8 +414,10 @@
         
         footer {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
             align-items: center;
+            padding-bottom: 5px;
         }
         
         .logo_contsacts {
@@ -424,25 +427,30 @@
         
         .footer_contacts {
             display: flex;
-            justify-content: space-around;
-            margin-top: 5px;
+            justify-content: space-evenly;
+            width: 80%;
         }
         
         .footer_logo img {
-            width: 200px;
+            max-width: 160px;
         }
         
-        .footer_contacts>img {
-            width: 20px;
+        .footer_contacts img {
+            width: 15px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
         }
         
         .footer_text {
             text-align: center;
-            width: 80%;
-            font-size: 10pt;
+            width: 50%;
+            font-size: 8pt;
             font-weight: 200;
             color: white;
-            margin-top: 20px;
+            margin-top: 10px;
         }
         
         .contacts_info {
@@ -451,33 +459,29 @@
         }
         
         .contacts,
-        .adress {
+        .adress,
+        .item {
             display: flex;
             align-items: center;
         }
         
         .phone,
-        .metka {
+        .item_photo {
             margin-right: 10px;
         }
         
-        .phone img,
-        .metka img {
-            width: 30px;
+        .phone img {
+            width: 20px;
         }
         
         .number {
             color: white;
-            font-size: 18px;
+            font-size: 13px;
         }
         
         .adress {
             color: white;
             font-size: 13px;
-        }
-        
-        .contacts {
-            margin-bottom: 10px;
         }
         
         a {
@@ -488,7 +492,7 @@
         .swiper-container {
             width: 100%;
             height: 80%;
-            top: 80px;
+            top: 0px;
         }
         
         .swiper-slide {
@@ -751,10 +755,6 @@
             .h1_riz>h1 {
                 font-size: 15pt;
             }
-            .freedom>p,
-            .in_riz>p {
-                font-size: 11pt;
-            }
         }
         
         @media (max-width: 440px) {
@@ -767,23 +767,19 @@
             .preview__title2 {
                 font-size: 25px;
             }
-            .innerYourTransport,
-            .innerRiznomanit {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
             .h1>h1,
             .h1_riz>h1 {
                 font-size: 14pt;
             }
             .freedom>p,
             .in_riz>p {
-                font-size: 9pt;
+                font-size: 8pt;
             }
             .in_riz {
                 text-align: left;
+            }
+            .goods_title>h1 {
+                font-size: 20pt;
             }
         }
         
@@ -1016,7 +1012,11 @@
         .title_product {
             background-color: rgba(0, 0, 0, 0.05);
             width: 100%;
-            margin: 150px 0 15px 0;
+            margin: 140px 0 15px 0;
+        }
+        
+        .name_product {
+            padding: 2% 3%;
         }
         
         .name_product>h1 {
@@ -1085,6 +1085,7 @@
         
         .product_info {
             display: flex;
+            justify-content: space-evenly;
             flex-wrap: wrap;
             width: 100%;
             margin: 100px auto 0 auto;
@@ -1095,8 +1096,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 10px 50px 0 0;
-            width: 20%;
+            margin: 10px 0 0 0;
+            width: 35%;
         }
         
         .characteristics_pht {
@@ -1104,7 +1105,7 @@
         }
         
         .characteristics_pht>img {
-            max-width: 40px;
+            max-width: 30px;
         }
         
         .characteristics_txt {
@@ -1127,6 +1128,18 @@
         }
         
         @media(max-width: 1200px) {
+            .product_info {
+                justify-content: space-around;
+            }
+            .characteristics_p1 {
+                font-size: 10px;
+            }
+            .characteristics_p2 {
+                font-size: 12;
+            }
+            .right_part {
+                padding-right: 20px;
+            }
             .name_product>h1 {
                 font-size: 27pt;
             }
@@ -1137,7 +1150,7 @@
                 width: 25px;
             }
             .word_buy {
-                font-size: 14px;
+                font-size: 13px;
             }
         }
         
@@ -1153,7 +1166,10 @@
             }
         }
         
-        @media(max-width: 800px) {
+        @media(max-width: 900px) {
+            .right_part {
+                margin-top: 100px;
+            }
             .inner_product {
                 display: flex;
                 flex-direction: column;
@@ -1167,7 +1183,7 @@
                 margin-top: 20px;
             }
             .name_product>h1 {
-                font-size: 30pt;
+                font-size: 25pt;
             }
             .product_price {
                 font-size: 35px;
@@ -1182,10 +1198,55 @@
                 display: flex;
                 justify-content: center;
             }
+            footer {
+                flex-direction: column;
+                flex-wrap: nowrap;
+            }
+            .footer_text {
+                font-size: 6pt;
+            }
         }
         
         @media(max-width: 550px) {
             .product_info {
                 width: 100%;
             }
+        }
+        /*---------------------Contacts-----------------------------*/
+        
+        .title_contacts {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.05);
+            padding-top: 20px;
+        }
+        
+        .inner_contacts {
+            width: 100%;
+            display: flex;
+        }
+        
+        .left_contacts {
+            width: 40%;
+        }
+        
+        .right_contacts {
+            width: 60%;
+        }
+        
+        .item_contacts {
+            display: block;
+            padding-top: 100px;
+        }
+        
+        .item {
+            margin-bottom: 30px;
+        }
+        
+        .item_photo img {
+            width: 25px;
+        }
+        
+        .item_text {
+            font-size: 20px;
+            font-weight: 200;
         }
